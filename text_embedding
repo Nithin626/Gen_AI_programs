@@ -1,0 +1,10 @@
+import openai # Import the openai package
+# Set up your OpenAI API key (replace with your actual key)
+openai.api_key = 'api-key’
+# Create an embedding
+response = openai.Embedding.create(
+ model="text-embedding-ada-002",
+ input="cat"
+)
+# Print the embedding vector
+print(response['data'][0]['embedding'])
